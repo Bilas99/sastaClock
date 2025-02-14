@@ -1,181 +1,230 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-   height: 100vh;
-   background: #CDF0E7;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
+	height: 100vh;
+	background: #f4f4f4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .clocks {
-   height: 80%;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
+	height: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .heading {
-   text-transform: uppercase;
-   font-family: 'Times New Roman', Times, serif;
+	color: #020d19;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	font-family: "Times New Roman",
+		Times,
+		serif;
 }
 
 /* Digital Clock Style*/
 .digital-clock {
-   width: 300px;
-   height: 150px;
-   background: #B3D7D3;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   border-radius: 10px;
+	width: 300px;
+	height: 150px;
+	background: #e4e4e4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
 }
 
 .date {
-   width: max-content;
-   font-size: 1.2rem;
-   background: linear-gradient(to right, #FB0505, #000000, #501111);
-   -webkit-background-clip: text;
-   color: transparent;
+	width: max-content;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background: linear-gradient(
+		to
+			right,
+		#fb0505,
+		#000000,
+		#501111
+	);
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .time {
-   width: max-content;
-   font-size: 2.2rem;
-   font-family: 'Times New Roman', Times, serif;
-   letter-spacing: -2px;
-   background: linear-gradient(to right, #0A2F28, #FC0808, #3E0B0B);
-   -webkit-background-clip: text;
-   color: transparent;
+	width: max-content;
+	font-size: 3rem;
+	font-weight: bold;
+	font-family: "Times New Roman",
+		Times,
+		serif;
+	letter-spacing: -2px;
+	background: linear-gradient(
+		to
+			right,
+		#0a2f28,
+		#fc0808,
+		#3e0b0b
+	);
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 /* Alalog Clock Styles */
 .analog-clock {
-   width: 300px;
-   height: 300px;
-   background: #B3D7D3;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   border-radius: 10px;
+	width: 300px;
+	height: 300px;
+	background: #e4e4e4;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
 }
 
 /* Clock Style */
 .clock {
-   width: 200px;
-   height: 200px;
-   background: #A3FFF7 url("./clock.png") center;
-   background-size: 205px;
-   border-radius: 50%;
-   border: 10px solid #143846;
-   position: relative;
-   box-shadow: inset 0px 10px 50px #2ADEB1,
-      inset 0px -10px 50px #2ADEB1
-      ;
+	width: 200px;
+	height: 200px;
+	background: #a3fff7
+		url("./clock.png")
+		center;
+	background-size: 205px;
+	border-radius: 50%;
+	border: 10px
+		solid
+		#143846;
+	position: relative;
+	box-shadow:
+		inset
+			0px
+			10px
+			50px
+			#2adeb1,
+		inset
+			0px -10px
+			50px
+			#2adeb1;
 }
 
 /* Clock Middle Point */
 .clock::before {
-   content: '';
-   width: 8px;
-   height: 8px;
-   background: #082524;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   border-radius: 50%;
-   z-index: 4; /* hide all middle points */
+	content: "";
+	width: 8px;
+	height: 8px;
+	background: #082524;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(
+		-50%,
+		-50%
+	);
+	border-radius: 50%;
+	z-index: 4; /* hide all middle points */
 }
 
 /* 
-   Note: all below👇 middle points width, height,
-   background, border-radius has not required,
-   it's only for giving perfect position in
-   middle so you can remove these
+  Note: all below👇 middle points width, height,
+  background, border-radius has not required,
+  it's only for giving perfect position in
+  middle so you can remove these
 */
 
 /* Second Middle Point */
 .sec {
-   width: 8px;
-   height: 8px;
-   background: red; 
-   border-radius: 50%;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   z-index: 3;
+	width: 8px;
+	height: 8px;
+	background: red;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(
+		-50%,
+		-50%
+	);
+	z-index: 3;
 }
 
 /* Hand of Second */
 .sec::before {
-   content: '';
-   width: 2px;
-   height: 60px;
-   background: #0A4037;
-   border-radius: 2px;
-   position: absolute;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
+	content: "";
+	width: 2px;
+	height: 60px;
+	background: #0a4037;
+	border-radius: 2px;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translateX(
+		-50%
+	);
 }
 
 /* Minute Middle Point */
 .min {
-   width: 8px;
-   height: 8px;
-   background: gold;
-   border-radius: 50%;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   z-index: 2;
+	width: 8px;
+	height: 8px;
+	background: gold;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(
+		-50%,
+		-50%
+	);
+	z-index: 2;
 }
 
 /* Hand of Minute */
 .min::before {
-   content: '';
-   width: 3px;
-   height: 50px;
-   background: #5E1CBE;
-   border-radius: 3px;
-   position: absolute;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
+	content: "";
+	width: 3px;
+	height: 50px;
+	background: #5e1cbe;
+	border-radius: 3px;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translateX(
+		-50%
+	);
 }
 
 /* Hour Middle Point */
 .hour {
-   width: 8px;
-   height: 8px;
-   background: blue;
-   border-radius: 50%;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   z-index: 1;
+	width: 8px;
+	height: 8px;
+	background: blue;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(
+		-50%,
+		-50%
+	);
+	z-index: 1;
 }
 
 /* Hand of Hour */
 .hour::before {
-   content: '';
-   width: 5px;
-   height: 40px;
-   background: #CF1D1D;
-   border-radius: 5px;
-   position: absolute;
-   bottom: 50%;
-   left: 50%;
-   transform: translateX(-50%);
+	content: "";
+	width: 5px;
+	height: 40px;
+	background: #cf1d1d;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translateX(
+		-50%
+	);
 }
